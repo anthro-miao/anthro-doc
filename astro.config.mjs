@@ -24,6 +24,16 @@ export default defineConfig({
 					],
 				},
 			],
+			head: [
+				{
+					tag: 'script',
+					attrs: {
+						src: 'https://umami.lin.pub/script.js',
+						'data-website-id': '5bbcb389-aadf-42ba-b2ad-f38dc83c6d8d',
+						defer: true,
+					},
+				},
+			],
 		}),
 	],
 });
