@@ -20,7 +20,8 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: '文档索引', slug: 'guides/content-index' },
-						{ label: '华为云优惠券', slug: 'guides/huaweicloud-coupon' }
+						{ label: '华为云优惠券', slug: 'guides/huaweicloud-coupon' },
+						{ label: '华为云邮件服务器', slug: 'guides/huaweicloud-mail-server' },
 					],
 				},
 			],
