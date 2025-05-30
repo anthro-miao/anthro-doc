@@ -1,0 +1,21 @@
+---
+const { dir, pagination } = Astro.locals.starlightRoute;
+const { prev, next } = pagination;
+import Default from '@astrojs/starlight/components/Pagination.astro';
+---
+{
+    prev && (
+        <div id="Comments" class="max-w-3xl mx-auto mt-12"></div>
+        <script src="https://artalk.lin.pub/dist/Artalk.js" is:inline></script>
+        <script is:inline>
+        Artalk.init({
+            el: "#Comments", // 绑定元素的 Selector
+            pageKey: "", // 固定链接 (留空自动获取)
+            pageTitle: "", // 页面标题 (留空自动获取)
+            server: "https://artalk.lin.pub", // 后端地址
+            site: "Anthro Doc", // 你的站点名
+        })
+        </script>
+    )
+}
+<Default />

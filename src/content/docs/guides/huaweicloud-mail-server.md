@@ -935,3 +935,12 @@ openssl x509 -in cert.pem -noout -pubkey | openssl pkey -pubin -outform DER | op
 测试网站为[mail-tester](https://www.mail-tester.com/)和[multirbl](https://multirbl.valli.org/)。
 
 华为云的 IP 很干净，就是可能需要去[spamhaus](https://www.spamhaus.org/lookup/)声明一下自己的ip是邮件服务器就行。
+
+## 设置账户密码
+
+```shell
+docker exec -ti mailserver setup alias add postmaster@example.com user@example.com
+setup email add user@example.com passwd123
+```
+
+然后，就开始你的愉快冒险吧，推荐开源邮箱客户端 [ThunderBird](https://www.thunderbird.net/en-US/thunderbird/all/)

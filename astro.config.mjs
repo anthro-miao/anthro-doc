@@ -1,12 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { h } from '@astrojs/starlight/expressive-code/hast';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Anthro Docs',
+			components: {
+				// Override the default `SocialIcons` component.
+				Pagination: './src/components/Artalk.astro',
+			},
 			locales: {
 				root: {
 					label: '简体中文',
@@ -34,6 +39,13 @@ export default defineConfig({
 						defer: true,
 					},
 				},
+				{
+					tag: 'link',
+					attrs: {
+						href: 'https://artalk.lin.pub/dist/Artalk.css',
+						rel: 'stylesheet',
+					}
+				}
 			],
 		}),
 	],
